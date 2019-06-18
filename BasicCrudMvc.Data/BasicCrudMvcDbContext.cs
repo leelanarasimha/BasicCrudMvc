@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BasicCrudMvc.core.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BasicCrudMvc.Data
 {
-    class BasicCrudMvcDbContext : DbContext
+    public class BasicCrudMvcDbContext : DbContext
     {
-        public BasicCrudMvcDbContext()
+        public BasicCrudMvcDbContext(DbContextOptions<BasicCrudMvcDbContext> options) : base(options)
         {
-
+            
         }
+
+        public DbSet<User> Users { get; set; }
     }
 }

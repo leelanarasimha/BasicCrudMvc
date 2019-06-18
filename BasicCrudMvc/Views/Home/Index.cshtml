@@ -1,8 +1,24 @@
-﻿@{
+﻿@model BasicCrudMvc.core.ViewModels.HomeViewModel;
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div>@Model.Message</div>
 </div>
+
+
+<table class="table">
+    <tbody>
+    @foreach(var user in Model.Users) {
+        <tr>
+            <td>@user.Name</td>
+            <td>@user.Location</td>
+            <td>@user.Email</td>
+            <td>@user.Age</td>
+        </tr>
+    }
+    
+    </tbody>
+</table>

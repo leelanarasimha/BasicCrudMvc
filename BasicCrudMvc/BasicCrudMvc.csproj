@@ -11,4 +11,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\BasicCrudMvc.Data\BasicCrudMvc.Data.csproj" />
+    <ProjectReference Include="..\BasicCrudMvc.core\BasicCrudMvc.core.csproj" />
+  </ItemGroup>
+
 </Project>

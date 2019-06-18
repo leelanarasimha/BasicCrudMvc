@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BasicCrudMvc.core.Models;
 
 namespace BasicCrudMvc.core.Contracts
 {
-    public class IUserRepository
+    public interface IUserRepository
     {
-        public IEnumerable<User> getAllUsers();
+        IEnumerable<User> getAllUsers();
     }
 }
